@@ -1,0 +1,21 @@
+<ion-view title="Login" id="page4" class=" ">
+  <ion-content padding="true" class="has-header">
+    <!--<a id="login-button3" style="border-radius:0px 0px 0px 0px;" class=" button button-positive  button-block icon ion-social-facebook "></a>
+        <div class="spacer" style="height: 40px;"></div>
+        <p id="login-markdown1" style="color:#000000;text-align:center;" class=" ">
+            <strong>OU</strong>
+        </p>-->
+    <h1 id="login-heading1" style="color:#000000;text-align:center;" class=" "></h1>
+    <form name="login" ng-submit="login(usuario)" class="list ">
+      <ion-list id="login-list1" class=" ">
+        <label class="item item-input " name="email">
+          <input ng-model="usuario.email" type="email" placeholder="Email">
+        </label>
+        <label class="item item-input " name="senha">
+          <input ng-model="usuario.password" type="password" placeholder="Senha">
+        </label>
+      </ion-list>
+      <input type="submit" class=" button button-stable  button-block " value="logar">
+    </form>
+  </ion-content>
+</ion-view>
