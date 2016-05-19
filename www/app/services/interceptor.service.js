@@ -1,4 +1,4 @@
-angular.module('app.services', [])
+angular.module('app.services')
   .factory('interceptorService', Interceptor);
 
 function Interceptor($window, $q) {
