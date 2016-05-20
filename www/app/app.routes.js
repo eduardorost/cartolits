@@ -43,11 +43,5 @@ angular.module('app.routes', [])
         abstract: true
       })
 
-      .state('login', {
-        url: '/login',
-        templateUrl: 'app/components/login/login.html',
-        controller: 'loginCtrl'
-      })
-
-    $urlRouterProvider.otherwise('/login')
+    $urlRouterProvider.otherwise('/menu/campeonato')
   });

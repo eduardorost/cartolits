@@ -1,42 +1,20 @@
 angular.module('app.services')
   .factory('interceptorService', Interceptor);
 
-function Interceptor($window, $q) {
+function Interceptor($window, TOKEN) {
   var interceptorService = {
-    response: response,
-    request: request,
-    responseError: responseError
+    request: request
   };
 
   return interceptorService;
 
-  function response(response) {
-    if (response && response.body) {
-      var token = response.body.glbId;
-      if (token) {
-        console.log(token);
-        $window.localStorage.token = token;
-      }
-    }
-
-    return response;
-  }
-
   function request(config) {
     config.headers = config.headers || {};
-
-    if ($window.localStorage.token)
-      config.headers['GLBID'] = $window.localStorage.token;
+    config.headers['X-GLB-Token'] = TOKEN;
 
     return config;
   }
 
-  function responseError(rejection) {
-    if (null != rejection && 401 == rejection.status)
-      delete $window.localStorage.token;
-
-    return $q.reject(rejection);
-  }
 }
 
 

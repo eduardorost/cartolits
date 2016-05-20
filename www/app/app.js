@@ -25,5 +25,7 @@ function run($ionicPlatform) {
 }
 
 function configuration($httpProvider) {
+  $httpProvider.defaults.useXDomain = true;
+
   $httpProvider.interceptors.push('interceptorService');
 }
