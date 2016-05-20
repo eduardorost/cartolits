@@ -1,0 +1,8 @@
+<ion-list class=" ">
+  <ion-item ng-repeat="time in times | orderBy : time.pontos : reverse" class="item-avatar item-icon-right">
+    <img ng-src="{{time.url_escudo_png}}">
+    <h2>{{time.nome}} - {{time.pontos | number : 2}}</h2>
+    <p style="white-space:normal;">{{time.nome_cartola}}</p>
+    <i class="icon ion-android-arrow-dropup"></i>
+  </ion-item>
+</ion-list>
