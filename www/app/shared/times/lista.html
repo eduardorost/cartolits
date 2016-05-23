@@ -3,6 +3,6 @@
     <img ng-src="{{time.url_escudo_png}}">
     <h2>{{time.nome}} - {{time.pontos | number : 2}}</h2>
     <p style="white-space:normal;">{{time.nome_cartola}}</p>
-    <i class="icon ion-android-arrow-dropup"></i>
+    <i class="icon" ng-class="{ 'ion-beer': $index < recebe, 'ion-cash': $index >= paga, 'ion-coffee': $index >= recebe && $index < paga }"></i>
   </ion-item>
 </ion-list>

@@ -7,7 +7,9 @@ function SharedTimesLista() {
     templateUrl: 'app/shared/times/lista.html',
     restrict: 'E',
     scope: {
-      times: '='
+      times: '=',
+      paga: '=',
+      recebe: '='
     }
   }
 

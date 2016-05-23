@@ -9,8 +9,11 @@ function Interceptor($window, TOKEN) {
   return interceptorService;
 
   function request(config) {
-    config.headers = config.headers || {};
-    config.headers['X-GLB-Token'] = TOKEN;
+    var url = config.url;
+    if (url.indexOf('app/') <= 0) {
+      config.headers = config.headers || {};
+      config.headers['X-GLB-Token'] = TOKEN;
+    }
 
     return config;
   }

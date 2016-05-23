@@ -37,6 +37,16 @@ angular.module('app.routes', [])
         }
       })
 
+      .state('menu.parciais', {
+        url: '/parciais',
+        views: {
+          'side-menu21': {
+            templateUrl: 'app/components/parciais/parciais.html',
+            controller: 'parciaisCtrl'
+          }
+        }
+      })
+
       .state('menu', {
         url: '/menu',
         templateUrl: 'app/components/menu/menu.html',
